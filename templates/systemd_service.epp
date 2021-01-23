@@ -1,0 +1,13 @@
+[Unit]
+Description=Choria.io Discovery Proxy Service
+After=network.target
+
+[Service]
+StandardOutput=syslog
+StandardError=syslog
+User=<%= $discovery_proxy::user %>
+Group=<%= $discovery_proxy::group %>
+ExecStart=<%= $discovery_proxy::binpath %> server --listen <%= $discovery_proxy::listen %> --tlsport <%= $discovery_proxy::tls_port %> --port <%= $discovery_proxy::port %> -H <%= $discovery_proxy::puppetdb_host %> -P <%= $discovery_proxy::puppetdb_port %> --ca <%= $discovery_proxy::ca_file %> --cert <%= $discovery_proxy::cert_file %> --key <%= $discovery_proxy::key_file %> --db <%= $discovery_proxy::db_dir %>/discovery.db <%= if $discovery_proxy::debug { "--debug" } else { "" } %>
+
+[Install]
+WantedBy=multi-user.target

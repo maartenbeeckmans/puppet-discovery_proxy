@@ -1,0 +1,9 @@
+{
+  "README.md": "59b020c92ab05bdb16a1211ef187d372",
+  "files/discovery_proxy-0.1.0": "3997a2e7612c7d806fd05b7c4bd7f835",
+  "manifests/init.pp": "4c6161819a97225f96e16b262072fab3",
+  "manifests/install.pp": "68a838eae400b502b7a2d81f4c39fdca",
+  "manifests/service.pp": "67ee28d666708c74fc2fd89a8fa27955",
+  "metadata.json": "107f9a17998cd56323a20b9b19786d51",
+  "templates/systemd_service.epp": "ddeb84a720b2f2870fd49c59f1abe150"
+}
